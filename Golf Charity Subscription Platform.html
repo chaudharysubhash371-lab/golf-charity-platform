@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golf Charity Subscription Platform</title>
+<style>
+    /* General Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; background: #f0f5f5; color: #333; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* Header */
+    header { background: linear-gradient(90deg,#00796b,#004d40); color: #fff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; }
+    header nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    header nav h1 { font-size: 1.8rem; }
+    header nav ul { display: flex; gap: 1rem; }
+    header nav ul li a { padding: 0.3rem 0.5rem; transition: 0.3s; }
+    header nav ul li a:hover { background: rgba(255,255,255,0.2); border-radius: 5px; }
+
+    /* Hero */
+    #hero { background: linear-gradient(135deg, #26a69a, #004d40); color: #fff; text-align: center; padding: 5rem 2rem; }
+    #hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    #hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+    #hero button { font-size: 1.1rem; padding: 0.8rem 2rem; background: #fff; color: #004d40; border-radius: 50px; border: none; cursor: pointer; transition: 0.3s; }
+    #hero button:hover { background: #c8e6c9; }
+
+    /* Sections */
+    section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+    h2 { font-size: 2rem; margin-bottom: 2rem; text-align: center; color: #00796b; }
+
+    /* Cards */
+    .card { background: #fff; padding: 1.5rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); margin-bottom: 2rem; transition: 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+
+    /* Features & How it works */
+    #features, #how-it-works { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 2rem; }
+    #features article, #how-it-works div { text-align: center; padding: 1.5rem; }
+
+    /* Buttons */
+    button { cursor: pointer; font-weight: bold; }
+    button:hover { opacity: 0.9; }
+
+    /* Forms */
+    form { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
+    form div { margin-bottom: 1rem; }
+    form label { display: block; margin-bottom: 0.3rem; font-weight: 600; }
+    input, select { width: 100%; padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; }
+
+    /* Dashboard Cards */
+    #dashboard article { margin-bottom: 2rem; }
+
+    /* CTA */
+    #subscribe { background: linear-gradient(135deg, #00796b,#004d40); color: #fff; text-align: center; padding: 4rem 2rem; }
+    #subscribe form { background: rgba(255,255,255,0.9); padding: 2rem; border-radius: 20px; }
+
+    /* Footer */
+    footer { background: #004d40; color: #fff; text-align: center; padding: 2rem; }
+    footer ul { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+    footer ul li a { color: #fff; transition: 0.3s; }
+    footer ul li a:hover { text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width:768px) {
+        header nav ul { flex-wrap: wrap; justify-content: center; margin-top: 1rem; }
+        #features, #how-it-works { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <h1>Golf For Good</h1>
+        <ul>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#charity">Charity</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="hero">
+    <h2>Play Golf. Win Rewards. Change Lives.</h2>
+    <p>Track your performance, enter monthly prize draws, and support a charity of your choice — all in one powerful platform.</p>
+    <button onclick="document.getElementById('subscribe').scrollIntoView()">Get Started</button>
+</section>
+
+<section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="card">
+        <h3>1. Subscribe</h3>
+        <p>Choose a monthly or yearly plan to unlock full access.</p>
+    </div>
+    <div class="card">
+        <h3>2. Enter Scores</h3>
+        <p>Submit your latest 5 Stableford scores and stay competitive.</p>
+    </div>
+    <div class="card">
+        <h3>3. Join Draws</h3>
+        <p>Automatically enter monthly draws and win exciting prizes.</p>
+    </div>
+    <div class="card">
+        <h3>4. Support Charity</h3>
+        <p>A portion of your subscription goes to a cause you care about.</p>
+    </div>
+</section>
+
+<section id="features">
+    <h2>Platform Features</h2>
+    <article class="card">
+        <h3>Subscription System</h3>
+        <p>Flexible monthly and yearly plans with seamless management.</p>
+    </article>
+    <article class="card">
+        <h3>Score Tracking</h3>
+        <p>Maintain your last 5 scores with automatic updates.</p>
+    </article>
+    <article class="card">
+        <h3>Draw Engine</h3>
+        <p>Fair and exciting monthly draws with jackpot rollover.</p>
+    </article>
+    <article class="card">
+        <h3>Charity Integration</h3>
+        <p>Donate while you play — choose and support your favorite cause.</p>
+    </article>
+</section>
+
+<section id="charity">
+    <h2>Make an Impact</h2>
+    <p>Every game you play contributes to meaningful change. Select a charity and track your impact over time.</p>
+    <button>Explore Charities</button>
+</section>
+
+<section id="dashboard">
+    <h2>User Dashboard</h2>
+
+    <article class="card">
+        <h3>Subscription Status</h3>
+        <p>Active Plan: Monthly</p>
+        <p>Next Renewal: 20 April 2026</p>
+    </article>
+
+    <article class="card">
+        <h3>Enter Your Scores</h3>
+        <form>
+            <div>
+                <label for="score1">Score 1:</label>
+                <input type="number" id="score1" name="score1" min="1" max="45">
+                <label for="date1">Date:</label>
+                <input type="date" id="date1" name="date1">
+            </div>
+            <div>
+                <label for="score2">Score 2:</label>
+                <input type="number" id="score2" name="score2" min="1" max="45">
+                <label for="date2">Date:</label>
+                <input type="date" id="date2" name="date2">
+            </div>
+            <div>
+                <label for="score3">Score 3:</label>
+                <input type="number" id="score3" name="score3" min="1" max="45">
+                <label for="date3">Date:</label>
+                <input type="date" id="date3" name="date3">
+            </div>
+            <div>
+                <label for="score4">Score 4:</label>
+                <input type="number" id="score4" name="score4" min="1" max="45">
+                <label for="date4">Date:</label>
+                <input type="date" id="date4" name="date4">
+            </div>
+            <div>
+                <label for="score5">Score 5:</label>
+                <input type="number" id="score5" name="score5" min="1" max="45">
+                <label for="date5">Date:</label>
+                <input type="date" id="date5" name="date5">
+            </div>
+            <button type="submit">Save Scores</button>
+        </form>
+    </article>
+
+    <article class="card">
+        <h3>Select Charity</h3>
+        <form>
+            <label for="charity-select">Choose a charity:</label>
+            <select id="charity-select" name="charity">
+                <option value="children">Children’s Fund</option>
+                <option value="environment">Environment Fund</option>
+                <option value="healthcare">Healthcare Fund</option>
+            </select>
+            <label for="charity-percentage">Contribution %:</label>
+            <input type="number" id="charity-percentage" name="charity-percentage" min="10" max="100" value="10">
+            <button type="submit">Update Charity</button>
+        </form>
+    </article>
+
+    <article class="card">
+        <h3>Participation Summary</h3>
+        <ul>
+            <li>Draws Entered: 3</li>
+            <li>Upcoming Draws: 1</li>
+            <li>Total Winnings: $250</li>
+        </ul>
+    </article>
+</section>
+
+<section id="subscribe">
+    <h2>Subscribe Today</h2>
+    <form>
+        <div>
+            <label for="plan">Select Plan:</label>
+            <select id="plan" name="plan">
+                <option value="monthly">Monthly - $20</option>
+                <option value="yearly">Yearly - $200</option>
+            </select>
+        </div>
+        <div>
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment">
+                <option value="card">Credit/Debit Card</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+        <button type="submit">Subscribe Now</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 Golf For Good Platform</p>
+    <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
